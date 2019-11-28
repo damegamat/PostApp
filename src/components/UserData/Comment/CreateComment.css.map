@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,AAAC,CACd,KAAK,CAAE,KAAK,CACZ,gBAAgB,CAAE,uBAA0B,CAC5C,OAAO,CAAE,GAAG,CACZ,MAAM,CAAE,mBAAmB,CAC3B,aAAa,CAAE,IAAI,CAUpB,AATE,AAAD,sBAAQ,AAAC,CACP,WAAW,CAAE,GAAG,CACjB,AACA,AAAD,sBAAQ,AAAC,CACP,OAAO,CAAE,KAAK,CACf,AACA,AAAD,oBAAM,AAAC,CACL,cAAc,CAAE,GAAG,CACpB",
+    "sources": [
+        "CreateComment.scss"
+    ],
+    "names": [],
+    "file": "CreateComment.css"
+}

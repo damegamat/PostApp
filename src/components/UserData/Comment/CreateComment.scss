@@ -1,0 +1,16 @@
+.Create-comment {
+  width: 250px;
+  background-color: rgba(184, 164, 164, 0.315);
+  padding: 5px;
+  margin: 10px 10vw 10px auto;
+  border-radius: 20px;
+  &__title {
+    padding-top: 5px;
+  }
+  &__email {
+    padding: 5px 0;
+  }
+  &__btn {
+    padding-bottom: 5px;
+  }
+}

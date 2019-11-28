@@ -1,0 +1,11 @@
+.Comment {
+  width: 75%;
+  margin: 5px auto;
+  background-color: #5875e733;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  &__body {
+    padding-bottom: 5px;
+  }
+}
