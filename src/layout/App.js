@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./Header";
-import Navigation from "./Navigation";
-import Main from "./Main";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Navigation from "./Navigation/Navigation";
+import Main from "./Main/Main";
+import Footer from "./Footer/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
-import "../styles/css/App.css";
+import "./App.css";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <header className="Head">
           <Header />
         </header>
-        <nav>
+        <nav className="Site-navigation">
           <Navigation />
         </nav>
         <main>
