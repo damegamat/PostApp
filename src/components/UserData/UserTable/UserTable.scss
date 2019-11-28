@@ -1,0 +1,12 @@
+.UserTable {
+  &__wrapper {
+    width: 75%;
+    margin: 20px auto;
+  }
+  &__table {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 10%;
+  }
+}
