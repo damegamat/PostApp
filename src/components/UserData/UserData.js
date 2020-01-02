@@ -77,7 +77,7 @@ const UserData = () => {
 
   const viewUser = id => {
     const item = id;
-    let user = users.filter(user => user.id == item);
+    let user = users.filter(user => user.id === item);
     setUser(user);
   };
 

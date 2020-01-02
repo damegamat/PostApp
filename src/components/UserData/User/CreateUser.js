@@ -18,9 +18,11 @@ const CreateUser = props => {
     modalUser
   } = props;
 
+  let headerName = "create user";
   let modalType;
   if (type === "change") {
     modalType = changeUser;
+    headerName = "change user";
   } else {
     modalType = createUser;
   }
@@ -30,7 +32,7 @@ const CreateUser = props => {
         X
       </Button>
       <form className="User-modal__form" onSubmit={handleSubmit(modalType)}>
-        <h2>CHANGE USER DATA</h2>
+        <h2>{headerName.toUpperCase()}</h2>
         <div>
           <label>First Name</label>
           <div>
