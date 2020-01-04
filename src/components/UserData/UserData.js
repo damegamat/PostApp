@@ -22,15 +22,20 @@ const APIkey = "dQsrYXjvuPaQ-3Y7bkrqKr_9Zj8VANg6B-3g";
 // FOR POST
 const APIp = `https://gorest.co.in/public-api/posts?page=999?_format=json&access-token=`;
 
+// FOR USER POSTS
+
+let APIup;
+
 const UserData = () => {
   let [users, setUsers] = useState([]);
   let [user, setUser] = useState([]);
   let [modalUserInfo, setUserInfo] = useState({ active: false, userInfo: "" });
   let [posts, setPosts] = useState([]);
+  let [userViewPost, setUserViewPost] = useState([]);
 
   useEffect(() => {
     const fetchDataUser = async () => {
-      const result = await fetch(`${API}${APIkey}`)
+      await fetch(`${API}${APIkey}`)
         .then(res => {
           if (res.ok) {
             return res;
@@ -44,7 +49,7 @@ const UserData = () => {
     };
 
     const fetchDataPost = async () => {
-      const result = await fetch(`${APIp}${APIkey}`)
+      await fetch(`${APIp}${APIkey}`)
         .then(res => {
           if (res.ok) {
             return res;
@@ -60,9 +65,24 @@ const UserData = () => {
           setPosts(shortData);
         });
     };
+    const fetchDataUserPost = async () => {
+      fetch(`${APIup}${APIkey}`)
+        .then(res => {
+          if (res.ok) {
+            return res;
+          }
+          throw Error(alert("Something goes wrong "));
+        })
+        .then(res => res.json())
+        .then(data => {
+          setUserViewPost(data.result);
+        });
+    };
+
     fetchDataPost();
     fetchDataUser();
-  }, []);
+    fetchDataUserPost();
+  }, [APIup]);
 
   //   ACTIVE MODAL
 
@@ -79,6 +99,10 @@ const UserData = () => {
     const item = id;
     let user = users.filter(user => user.id === item);
     setUser(user);
+
+    // FOR USER POSTS
+
+    APIup = `https://gorest.co.in/public-api/posts?user_id=${id}&_format=json&access-token=`;
   };
 
   //  CHANGE USER INFO IN API AND TABLE
@@ -162,6 +186,7 @@ const UserData = () => {
   const createPost = formData => {
     const APIcp = "https://gorest.co.in/public-api/posts";
     const data = formData;
+    console.log(formData);
     return fetch(`${APIcp}`, {
       method: "post",
       headers: {
@@ -210,7 +235,12 @@ const UserData = () => {
                   viewUser={viewUser}
                   users={users}
                 />
-                <UserInfo user={user} />
+
+                <UserInfo
+                  user={user}
+                  createPost={createPost}
+                  userPost={userViewPost}
+                />
               </>
             )}
           />
