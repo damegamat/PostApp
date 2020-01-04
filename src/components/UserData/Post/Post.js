@@ -17,7 +17,7 @@ const Post = ({ post, APIkey }) => {
 
   useEffect(() => {
     const fetchDataUser = async () => {
-      const result = await fetch(`${API}${APIkey}`)
+      await fetch(`${API}${APIkey}`)
         .then(res => {
           if (res.ok) {
             return res;
@@ -31,7 +31,7 @@ const Post = ({ post, APIkey }) => {
     };
 
     const fetchDataComment = async () => {
-      const result = await fetch(`${APIc}${APIkey}`)
+      await fetch(`${APIc}${APIkey}`)
         .then(res => {
           if (res.ok) {
             return res;

@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "AAAA,AAAA,KAAK,AAAC,CACJ,OAAO,CAAE,IAAI,CACb,gBAAgB,CAAE,OAAO,CACzB,MAAM,CAAE,IAAI,CACZ,UAAU,CAAE,IAAI,CAQjB,AAPE,AAAD,YAAQ,AAAC,CACP,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,QAAQ,CACjB,MAAM,CAAE,MAAM,CACd,KAAK,CAAE,IAAI,CACX,gBAAgB,CAAE,qBAAwB,CAC3C",
     "sources": [
-        "../sass/Header.scss"
+        "Header.scss"
     ],
     "names": [],
     "file": "Header.css"

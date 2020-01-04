@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "AACG,AAAD,mBAAU,AAAC,CACT,KAAK,CAAE,GAAG,CACV,MAAM,CAAE,SAAS,CAClB,AACA,AAAD,iBAAQ,AAAC,CACP,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,MAAM,CACd,UAAU,CAAE,IAAI,CAChB,YAAY,CAAE,GAAG,CAClB",
     "sources": [
-        "../sass/UserTable.scss"
+        "UserTable.scss"
     ],
     "names": [],
     "file": "UserTable.css"
