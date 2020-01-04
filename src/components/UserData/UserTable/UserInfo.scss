@@ -1,1 +1,41 @@
+.User_content {
+  background-color: rgba(178, 190, 195, 0.2);
+  padding: 20px 5%;
+  display: flex;
+  justify-content: center;
+}
 
+.User_information {
+  flex-basis: 250px;
+  & p:nth-child(odd) {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.287);
+  }
+}
+.User_post {
+  flex-basis: 40%;
+  font-size: 1.1rem;
+  &__content {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: rgba(116, 186, 255, 0.801);
+    border-radius: 10px;
+  }
+  &__number {
+    font-size: 1.25rem;
+  }
+  &__title {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    letter-spacing: 0.15rem;
+  }
+  &__body {
+    letter-spacing: 0.08rem;
+    text-align: justify;
+  }
+}
+.User_post-create {
+  align-self: center;
+  flex-grow: 1;
+}
