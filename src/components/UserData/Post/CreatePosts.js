@@ -79,7 +79,6 @@ const CreatePosts = props => {
 
 const mapStateToProps = (state, { userOne, users }) => {
   let userActualID;
-  console.log(userOne[0]["id"]);
   if (users) {
     userActualID = null;
   } else {
