@@ -128,16 +128,18 @@ const CreateUser = props => {
     </div>
   );
 };
-const mapStateToProps = (state, { userInfo }) => ({
-  initialValues: {
-    first_name: `${userInfo.first_name ? userInfo.first_name : ""}`,
-    last_name: userInfo.last_name,
-    email: userInfo.email,
-    phone: userInfo.phone,
-    gender: userInfo.gender,
-    address: userInfo.address
-  }
-});
+const mapStateToProps = (state, { userInfo }) => {
+  return {
+    initialValues: {
+      first_name: `${userInfo.first_name ? userInfo.first_name : ""}`,
+      last_name: userInfo.last_name,
+      email: userInfo.email,
+      phone: userInfo.phone,
+      gender: userInfo.gender,
+      address: userInfo.address
+    }
+  };
+};
 
 export default connect(mapStateToProps)(
   reduxForm({
